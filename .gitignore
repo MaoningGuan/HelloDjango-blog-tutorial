@@ -1,2 +1,4 @@
-# database files
+# database files:
 db.sqlite3
+Pipfile
+Pipfile.lock
