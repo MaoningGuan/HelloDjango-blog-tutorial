@@ -5,7 +5,7 @@
 # 1.  创建一个远程连接
 # 2. 进入指定目录
 # 3. 在指定目录下面执行重启命令
-from fabric import Connection
+from fabric2 import Connection
 from invoke import Responder
 from _credentials import github_username, github_password
 

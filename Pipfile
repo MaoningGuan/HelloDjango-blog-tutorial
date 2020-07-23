@@ -4,7 +4,6 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 verify_ssl = true
 
 [dev-packages]
-fabric = "*"
 
 [packages]
 django = "==2.2.3"
