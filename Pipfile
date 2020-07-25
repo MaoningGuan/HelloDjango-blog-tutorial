@@ -12,6 +12,7 @@ markdown = "*"
 gunicorn = "*"
 paramiko = "*"
 faker = "*"
+django-pure-pagination = "*"
 
 [requires]
 python_version = "3.7"
