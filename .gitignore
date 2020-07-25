@@ -3,3 +3,6 @@ db.sqlite3
 
 # private files
 _credentials.py
+
+# python build files
+__pycache__/
