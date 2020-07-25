@@ -1,0 +1,17 @@
+[[source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+verify_ssl = true
+
+[dev-packages]
+fabric = "*"
+
+[packages]
+django = "==2.2.3"
+markdown = "*"
+gunicorn = "*"
+paramiko = "*"
+faker = "*"
+
+[requires]
+python_version = "3.7"
