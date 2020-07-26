@@ -6,3 +6,4 @@ _credentials.py
 
 # python build files
 __pycache__/
+.idea/

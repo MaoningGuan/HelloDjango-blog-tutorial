@@ -1,15 +1,22 @@
-from django.shortcuts import render, get_object_or_404
-from django.utils.text import slugify
+from django.contrib import messages
+from django.db.models import Q
+from django.shortcuts import redirect, render, get_object_or_404
 from django.views.generic import DetailView, ListView
-import markdown
-from markdown.extensions.toc import TocExtension
 from pure_pagination.mixins import PaginationMixin
-import re
 
 from .models import Post, Category, Tag
 
 
-# Create your views here.
+def search(request):
+    q = request.GET.get('q')
+
+    if not q:
+        error_msg = "请输入搜索关键词"
+        messages.add_message(request, messages.ERROR, error_msg, extra_tags='danger')
+        return redirect('blog:index')
+    post_list = Post.objects.filter(Q(title__icontains=q) | Q(body__icontains=q))
+    return render(request, 'blog/index.html', {'post_list': post_list})
+
 
 class IndexView(PaginationMixin, ListView):
     model = Post

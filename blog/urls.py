@@ -15,4 +15,6 @@ urlpatterns = [
 
     # RSS链接，记得在顶部引入 AllPostsRssFeed
     path('all/rss/', AllPostsRssFeed(), name='rss'),
+    # search视图函数url
+    path('search/', views.search, name='search')
 ]
